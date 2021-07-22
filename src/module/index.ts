@@ -1,6 +1,6 @@
 import { Uri } from "./type"
-import { callApi } from './api'
+import { callAPI } from './api'
 export type {
     Uri,
-    callApi,
+    callAPI,
 }

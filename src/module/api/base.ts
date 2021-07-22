@@ -25,12 +25,12 @@ function convertUri(uri: Uri): string {
 }
 
 
-function callApi(uri: Uri, requestInit?: RequestInit): Promise<Response> {
+function callAPI(uri: Uri, requestInit?: RequestInit): Promise<Response> {
     return fetch(convertUri(uri), requestInit);
 }
 
 
 
 export {
-    callApi,
+    callAPI,
 }

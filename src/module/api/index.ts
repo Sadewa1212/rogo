@@ -1,3 +1,3 @@
 export {
-    callApi
+    callAPI
 } from "./base"
