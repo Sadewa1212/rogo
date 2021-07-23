@@ -1,10 +1,11 @@
 import { Switch, Route } from "react-router-dom";
-import React from 'react'
+import { PathLogin, PathSplash } from "./path";
 
 export default function Router() {
     return (
-        <Switch>
-            <Route />
+        <Switch >
+            <Route {...PathSplash} />
+            <Route {...PathLogin} />
         </Switch>
     )
 }
