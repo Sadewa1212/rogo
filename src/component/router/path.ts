@@ -1,5 +1,5 @@
 import { RouteProps } from "react-router-dom";
-import { Login, Splash } from "../screen";
+import { Login, NotFound, Splash } from "../screen";
 
 export const PathLogin: RouteProps = {
     path: "/login",
@@ -35,5 +35,7 @@ export const PathAdminSystemManagerUsers: RouteProps = {
 }
 
 export const PathNotFound: RouteProps = {
-    path: "*"
+    path: "*",
+    component: NotFound,
+    exact: true,
 }
