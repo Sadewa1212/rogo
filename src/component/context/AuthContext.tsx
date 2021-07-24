@@ -1,45 +1,46 @@
-import React, { useContext, createContext, useState } from "react"
-import { FakeAuth, FakeLoading } from "../../module";
+import React, { useContext, createContext, useState, useEffect } from "react"
+import { AuthState } from "../../module";
 import { LoadingAuth } from "../widget";
 import { firebaseApp } from "../../module";
 
-const authContext: React.Context<FakeAuth> = createContext<FakeAuth>({
+const AuthContext: React.Context<AuthState> = createContext<AuthState>({
     isLogin: false
 });
 
-const useAuth: FakeAuth = useContext<FakeAuth>(authContext);
+function useAuth(): AuthState {
+    return useContext<AuthState>(AuthContext)
+}
 
-function AuthContext(props: {
+function AuthProvider(props: {
     children?: JSX.Element,
-}) {
-    const [loading, useLoading] = useState<FakeLoading>({
-        isLoading: true
-    });
+}): JSX.Element {
+    const [loading, setLoading] = useState<boolean>(true);
+    const [login, setLogin] = useState<boolean>(false)
     const app = firebaseApp;
-    app.auth().onAuthStateChanged((user) => {
-        useLoading({
-            isLoading: false
+    useEffect(() => {
+        app.auth().onAuthStateChanged((user) => {
+            if (user === undefined || user === null)
+                setLogin(false);
+            else
+                setLogin(true);
+            setLoading(false);
         });
-        if (user === undefined || user === null)
-            useAuth.isLogin = false;
-        else
-            useAuth.isLogin = true;
     })
     return (
-        <authContext.Provider value={
+        <AuthContext.Provider value={
             {
-                isLogin: false
+                isLogin: login
             }
         } >
             {
-                loading.isLoading ? <LoadingAuth /> : props.children
+                loading ? <LoadingAuth /> : props.children
             }
-        </authContext.Provider>
-    )
+        </AuthContext.Provider>
+    );
 }
 
 
 export {
     useAuth,
-    AuthContext,
+    AuthProvider,
 }

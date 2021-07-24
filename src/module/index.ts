@@ -1,10 +1,9 @@
-import { Uri, FakeAuth, FakeLoading } from "./type"
+import { Uri, AuthState } from "./type"
 import { callAPI } from './api'
 export type {
     Uri,
     callAPI,
-    FakeAuth,
-    FakeLoading,
+    AuthState,
 }
 
 export {

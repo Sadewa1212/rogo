@@ -1,13 +1,11 @@
 import React from 'react'
-import { FakeAuth } from '../../module'
-import { useAuth } from '../context'
+//import { AuthState } from '../../module'
+//import { useAuth } from '../context'
 export default function Splash() {
-    const auth: FakeAuth = useAuth;
+    //const auth: AuthState = useAuth();
     return (
         <div>
-            {
-                auth.isLogin
-            }
+            Splash
         </div>
     )
 }

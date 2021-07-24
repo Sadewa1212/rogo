@@ -26,6 +26,6 @@ export {
 } from "./widget"
 
 export {
-    AuthContext,
+    AuthProvider,
     useAuth,
 } from "./context"

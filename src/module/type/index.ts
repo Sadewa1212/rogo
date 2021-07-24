@@ -1,8 +1,6 @@
 import { Uri } from "./uri";
-import FakeAuth from "./fakeAuth";
-import FakeLoading from "./fakeLoading";
+import AuthState from "./auth.state"; "./auth";
 export type {
     Uri,
-    FakeAuth,
-    FakeLoading,
+    AuthState,
 }
