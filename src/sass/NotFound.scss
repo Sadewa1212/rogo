@@ -1,16 +1,16 @@
-.NotFoundDivImgUndrawPageNotFound {
-    width: 80vw;
-    height: 60vh;
-    margin: 54px 0 0 0;
-}
-
-.NotFoundDiv {
+div.NotFound {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-p.NotFoundP {
+div.NotFound img {
+    width: 80vw;
+    height: 60vh;
+    margin: 54px 0 0 0;
+}
+
+div.NotFound p {
     margin: 54px 0;
     font-weight: bold;
     font-size: 32px;
