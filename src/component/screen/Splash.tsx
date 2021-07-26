@@ -5,7 +5,9 @@ export default function Splash() {
     //const auth: AuthState = useAuth();
     return (
         <div>
-            Splash
+            {
+                process.env.REACT_APP_NODE_ENV
+            }
         </div>
     )
 }
