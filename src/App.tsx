@@ -1,10 +1,10 @@
 import React from 'react';
-import { AuthProvider, Router } from './component';
+import { AuthProvider, RouterApp } from './component';
 function App() {
   return (
     <React.Fragment>
       <AuthProvider>
-        <Router />
+        <RouterApp />
       </AuthProvider>
     </React.Fragment>
   );

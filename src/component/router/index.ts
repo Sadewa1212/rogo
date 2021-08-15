@@ -1,4 +1,4 @@
-import Router from "./Router"
+import RouterApp from "./RouterApp"
 export {
     PathNotFound,
     PathAdminOrganizationManagerUsers,
@@ -11,5 +11,5 @@ export {
 } from "./path"
 
 export {
-    Router,
+    RouterApp,
 }

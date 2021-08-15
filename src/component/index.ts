@@ -18,7 +18,7 @@ export {
     PathNotFound,
     PathOrganization,
     PathSplash,
-    Router,
+    RouterApp,
 } from "./router"
 
 export {
