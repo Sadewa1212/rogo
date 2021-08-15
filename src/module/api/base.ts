@@ -1,5 +1,4 @@
 import { Uri } from "../type/uri";
-import { } from "react";
 
 
 function convertUri(uri: Uri): string {
