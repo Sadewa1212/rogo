@@ -1,6 +1,6 @@
 import React from 'react'
 import { UnDrawPageNotFound } from '../../asset'
-import "../../sass/NotFound.scss"
+import "../../sass/_not_found.scss"
 export default function NotFound() {
     return (
         <div className="not_found">
