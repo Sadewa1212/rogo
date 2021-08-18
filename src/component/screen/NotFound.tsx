@@ -3,7 +3,7 @@ import { UnDrawPageNotFound } from '../../asset'
 import "../../sass/NotFound.scss"
 export default function NotFound() {
     return (
-        <div className="NotFound">
+        <div className="not_found">
             <img src={UnDrawPageNotFound} alt="Page Not Found" />
             <p>Page Not Found</p>
         </div>
