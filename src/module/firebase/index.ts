@@ -1,4 +1,6 @@
-import { firebaseApp } from "./firebase"
 export {
     firebaseApp,
-}
+} from "./firebase";
+export {
+    auth,
+} from "./firebase.app";
