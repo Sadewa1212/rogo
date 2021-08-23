@@ -1,3 +1,9 @@
-div.loading_auth{
-    
+div.loading{
+    &_auth{
+        margin: 0;
+    }
+
+    &_auth img {
+        margin: 0;
+    }
 }
