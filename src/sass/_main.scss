@@ -1,4 +1,9 @@
 @import './variables';
 @import './mixins';
+
+*{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 @import './not_found';
 @import './loading_auth';
