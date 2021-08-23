@@ -1,19 +1,11 @@
 div.loading{
     &_auth{
-        margin: 0;
         display: flex;
         justify-content: center;
-        align-content: center;
-        &_box{
-            display: flex;
-            height: auto;
-            width: auto;
-            flex-direction: column;
-        }
+        align-items: center;
     }
 
     &_auth img {
-        margin: 0;
-        width: 540px;
+        width: 320px;
     }
 }
