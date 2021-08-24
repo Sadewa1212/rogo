@@ -7,6 +7,10 @@ export default class FetchDataUser extends React.Component {
         document.title = 'Loading...'
     }
 
+    componentDidUpdate() {
+        document.title = 'Loading...'
+    }
+
     render(): JSX.Element {
         return (
             <div className='fetch_data_user'>
