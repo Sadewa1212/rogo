@@ -1,3 +1,5 @@
+$height_process_bar:8px;
+
 div.fetch_data_user{
     display: flex;
     margin: 25vh 0 12vh 0;
@@ -11,12 +13,12 @@ div.fetch_data_user{
         border-radius: 8px;
         border: 0.5px solid #00000070;
         width: 320px;
-        height: 12px;
+        height: $height_process_bar;
         margin-top: 24px;
         &_nested{
             border-radius: 8px;
             width: 320px;
-            height: 12px;
+            height: $height_process_bar;
             background-color: $primary;
             animation-name: transProcessNested;
             animation-duration: 2s;
