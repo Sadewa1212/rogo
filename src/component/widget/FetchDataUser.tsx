@@ -14,11 +14,9 @@ export default class FetchDataUser extends React.Component {
     render(): JSX.Element {
         return (
             <div className='fetch_data_user'>
-                <div className='fetch_data_user_box'>
-                    <img src={UnDrawNoData} alt='No Data' />
-                    <div className='fetch_data_user_process'>
-                        <div className='fetch_data_user_process_nested' />
-                    </div>
+                <img src={UnDrawNoData} alt='No Data' />
+                <div className='fetch_data_user_bar_process'>
+                    <div className='fetch_data_user_bar_process_nested' />
                 </div>
             </div>
         );
