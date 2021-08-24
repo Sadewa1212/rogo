@@ -37,7 +37,6 @@ class AuthProvider extends React.Component<{
                     isLogin: true,
                     isLoading: false,
                 });
-            console.log(this.state.isLogin);
         });
     }
 
