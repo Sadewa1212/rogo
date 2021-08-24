@@ -1,0 +1,46 @@
+div.fetch_data_user{
+    display: flex;
+    margin: 25vh 0 12vh 0;
+    align-items: center;
+    flex-direction: column;
+    & img{
+        width: 320px;
+        height: 240px;
+    }
+    &_process{
+        border-radius: 8px;
+        border: 1px solid #000000AA;
+        width: 320px;
+        height: 12px;
+        margin-top: 24px;
+        &_nested{
+            border-radius: 8px;
+            width: 320px;
+            height: 12px;
+            background-color: $primary;
+            animation-name: transProcessNested;
+            animation-duration: 2s;
+        }
+    }
+}
+
+@keyframes transProcessNested {
+    0%{
+        width: 0;
+    }
+    20%{
+        width: 32px;
+    }
+    40%{
+        width: 120px;
+    }
+    60%{
+        width: 180px;
+    }
+    80%{
+        width: 220px;
+    }
+    100%{
+        width: 280px;
+    }
+}
