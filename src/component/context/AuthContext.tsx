@@ -1,4 +1,4 @@
-import React, { useContext, createContext, useState, useEffect } from "react"
+import React, { useContext, createContext } from "react"
 import { AuthState } from "../../module";
 import { LoadingAuth } from "../widget";
 import { firebaseApp } from "../../module";
@@ -11,32 +11,50 @@ function useAuth(): AuthState {
     return useContext<AuthState>(AuthContext)
 }
 
-function AuthProvider(props: {
-    children?: JSX.Element,
-}): JSX.Element {
-    const [loading, setLoading] = useState<boolean>(true);
-    const [login, setLogin] = useState<boolean>(false)
-    const app = firebaseApp;
-    useEffect(() => {
-        app.auth().onAuthStateChanged((user) => {
+class AuthProvider extends React.Component<{
+    chirdlen?: JSX.Element,
+}, {
+    isLogin: boolean,
+    isLoading: boolean,
+}> {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            isLoading: true,
+            isLogin: false,
+        }
+    }
+
+    componentDidMount() {
+        firebaseApp.auth().onAuthStateChanged((user: any) => {
             if (user === undefined || user === null)
-                setLogin(false);
+                this.setState({
+                    isLogin: false,
+                    isLoading: false,
+                });
             else
-                setLogin(true);
-            setLoading(false);
+                this.setState({
+                    isLogin: true,
+                    isLoading: false,
+                });
+            console.log(this.state.isLogin);
         });
-    })
-    return (
-        <AuthContext.Provider value={
-            {
-                isLogin: login
-            }
-        } >
-            {
-                loading ? <LoadingAuth /> : props.children
-            }
-        </AuthContext.Provider>
-    );
+    }
+
+
+    render() {
+        return (
+            <AuthContext.Provider value={
+                {
+                    isLogin: this.state.isLogin
+                }
+            } >
+                {
+                    this.state.isLoading ? <LoadingAuth /> : this.props.children
+                }
+            </AuthContext.Provider>
+        );
+    }
 }
 
 
