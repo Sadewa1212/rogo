@@ -23,6 +23,8 @@ export {
 
 export {
     LoadingAuth,
+    FetchDataUser,
+    LoginForm,
 } from "./widget"
 
 export {
