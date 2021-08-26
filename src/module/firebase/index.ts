@@ -3,4 +3,4 @@ export {
 } from "./firebase";
 export {
     auth,
-} from "./firebase.app";
+} from "./firebase-app";
