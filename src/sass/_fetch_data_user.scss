@@ -1,49 +1,49 @@
-$height_process_bar:8px;
+$height_process_bar: 8px;
 
-div.fetch_data_user{
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    & img{
-        width: 320px;
-        height: 240px;
+div.fetch_data_user {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  & img {
+    width: 320px;
+    height: 240px;
+  }
+  &_bar_process {
+    border-radius: 8px;
+    border: 0.5px solid #00000070;
+    width: 320px;
+    height: $height_process_bar;
+    margin-top: 24px;
+    &_nested {
+      border-radius: 8px;
+      width: 320px;
+      height: $height_process_bar;
+      background-color: $primary;
+      animation-name: transProcessNested;
+      animation-duration: 2s;
     }
-    &_bar_process{
-        border-radius: 8px;
-        border: 0.5px solid #00000070;
-        width: 320px;
-        height: $height_process_bar;
-        margin-top: 24px;
-        &_nested{
-            border-radius: 8px;
-            width: 320px;
-            height: $height_process_bar;
-            background-color: $primary;
-            animation-name: transProcessNested;
-            animation-duration: 2s;
-        }
-    }
+  }
 }
 
 @keyframes transProcessNested {
-    0%{
-        width: 0;
-    }
-    20%{
-        width: 32px;
-    }
-    40%{
-        width: 120px;
-    }
-    60%{
-        width: 180px;
-    }
-    80%{
-        width: 220px;
-    }
-    100%{
-        width: 280px;
-    }
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 32px;
+  }
+  40% {
+    width: 120px;
+  }
+  60% {
+    width: 180px;
+  }
+  80% {
+    width: 220px;
+  }
+  100% {
+    width: 280px;
+  }
 }

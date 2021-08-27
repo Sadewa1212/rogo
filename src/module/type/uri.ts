@@ -1,13 +1,13 @@
 interface Uri {
-    scheme?: string | undefined;
-    host?: string | undefined;
-    port?: number | undefined;
-    path?: Array<string> | undefined;
-    queryParameter?: Array<{
+  scheme?: string | undefined;
+  host?: string | undefined;
+  port?: number | undefined;
+  path?: Array<string> | undefined;
+  queryParameter?:
+    | Array<{
         key: string;
         value: string;
-    }> | undefined;
+      }>
+    | undefined;
 }
-export type {
-    Uri,
-}
+export type { Uri };

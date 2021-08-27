@@ -1,13 +1,13 @@
-div.loading{
-    &_auth{
-        display: flex;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-    }
+div.loading {
+  &_auth {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
 
-    &_auth img {
-        width: 320px;
-        height: 240px;
-    }
+  &_auth img {
+    width: 320px;
+    height: 240px;
+  }
 }

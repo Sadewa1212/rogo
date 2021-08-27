@@ -7,12 +7,12 @@ import NotFound from "./NotFound";
 import Organization from "./Organization";
 import Splash from "./Splash";
 export {
-    AdminOrganizationManagerUsers,
-    AdminSystemManagerUsers,
-    Console,
-    Dashboard,
-    Login,
-    NotFound,
-    Organization,
-    Splash,
-}
+  AdminOrganizationManagerUsers,
+  AdminSystemManagerUsers,
+  Console,
+  Dashboard,
+  Login,
+  NotFound,
+  Organization,
+  Splash,
+};

@@ -1,15 +1,13 @@
-import RouterApp from "./RouterApp"
+import RouterApp from "./RouterApp";
 export {
-    PathNotFound,
-    PathAdminOrganizationManagerUsers,
-    PathAdminSystemManagerUsers,
-    PathConsole,
-    PathDashboard,
-    PathLogin,
-    PathOrganization,
-    PathSplash,
-} from "./path"
+  PathNotFound,
+  PathAdminOrganizationManagerUsers,
+  PathAdminSystemManagerUsers,
+  PathConsole,
+  PathDashboard,
+  PathLogin,
+  PathOrganization,
+  PathSplash,
+} from "./path";
 
-export {
-    RouterApp,
-}
+export { RouterApp };

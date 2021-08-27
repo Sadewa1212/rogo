@@ -1,3 +1,1 @@
-export {
-    callAPI
-} from "./base"
+export { callAPI } from "./base";

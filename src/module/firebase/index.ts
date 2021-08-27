@@ -1,6 +1,2 @@
-export {
-    firebaseApp,
-} from "./firebase";
-export {
-    auth,
-} from "./firebase-app";
+export { firebaseApp } from "./firebase";
+export { auth } from "./firebase-app";

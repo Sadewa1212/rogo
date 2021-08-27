@@ -1,16 +1,16 @@
 div.not_found {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    & img{
-        width: 80vw;
-        height: 60vh;
-    }
-    & p{
-        margin: 54px 0;
-        font-weight: bold;
-        font-size: 32px;
-    }
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  & img {
+    width: 80vw;
+    height: 60vh;
+  }
+  & p {
+    margin: 54px 0;
+    font-weight: bold;
+    font-size: 32px;
+  }
 }

@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function Organization() {
-    return (
-        <div>
-            Organization
-        </div>
-    )
+  return <div>Organization</div>;
 }
