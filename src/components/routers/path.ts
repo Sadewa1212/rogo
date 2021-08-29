@@ -1,5 +1,5 @@
 import { RouteProps } from "react-router-dom";
-import { Login, NotFound, Splash } from "../screen";
+import { Login, NotFound, Splash } from "../screens";
 
 export const PathLogin: RouteProps = {
   path: "/login",

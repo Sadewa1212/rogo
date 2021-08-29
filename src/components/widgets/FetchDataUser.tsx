@@ -1,5 +1,5 @@
 import React from "react";
-import { UnDrawNoData } from "../../asset";
+import { UnDrawNoData } from "../../assets";
 
 export default class FetchDataUser extends React.Component {
   componentDidMount() {

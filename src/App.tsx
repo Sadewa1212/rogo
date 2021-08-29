@@ -1,5 +1,5 @@
 import React from "react";
-import { AuthProvider, RouterApp } from "./component";
+import { AuthProvider, RouterApp } from "./components";
 import "./sass/_main.scss";
 function App() {
   return (

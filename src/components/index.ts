@@ -7,7 +7,7 @@ export {
   NotFound,
   Organization,
   Splash,
-} from "./screen";
+} from "./screens";
 
 export {
   PathAdminOrganizationManagerUsers,
@@ -19,8 +19,8 @@ export {
   PathOrganization,
   PathSplash,
   RouterApp,
-} from "./router";
+} from "./routers";
 
-export { LoadingAuth, FetchDataUser, LoginForm } from "./widget";
+export { LoadingAuth, FetchDataUser, LoginForm } from "./widgets";
 
-export { AuthProvider, useAuth } from "./context";
+export { AuthProvider, useAuth } from "./contexts";

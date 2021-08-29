@@ -1,5 +1,5 @@
-import { Uri, AuthState } from "./type";
-import { callAPI } from "./api";
+import { Uri, AuthState } from "./types";
+import { callAPI } from "./apis";
 export type { Uri, callAPI, AuthState };
 
 export { firebaseApp } from "./firebase";

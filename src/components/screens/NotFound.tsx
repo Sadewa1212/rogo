@@ -1,5 +1,5 @@
 import React from "react";
-import { UnDrawPageNotFound } from "../../asset";
+import { UnDrawPageNotFound } from "../../assets";
 export default class NotFound extends React.Component<any, any> {
   componentDidMount(): void {
     document.title = "Page Not Found";

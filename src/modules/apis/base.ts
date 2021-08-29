@@ -1,4 +1,4 @@
-import { Uri } from "../type/uri";
+import { Uri } from "../types/uri";
 
 function convertUri(uri: Uri): string {
   /***
