@@ -1,7 +1,7 @@
 import React, { useContext, createContext } from "react";
 import { AuthState } from "../../modules";
 import { LoadingAuth } from "../widgets";
-import { firebaseApp } from "../../modules";
+import { auth } from "../../modules/firebase";
 
 const AuthContext: React.Context<AuthState> = createContext<AuthState>({
   isLogin: false,
@@ -29,7 +29,7 @@ class AuthProvider extends React.Component<
   }
 
   componentDidMount() {
-    firebaseApp.auth().onAuthStateChanged((user: any) => {
+    auth.onAuthStateChanged((user: any) => {
       if (user === undefined || user === null)
         this.setState({
           isLogin: false,
