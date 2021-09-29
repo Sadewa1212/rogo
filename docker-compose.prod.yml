@@ -3,7 +3,7 @@ services:
     app:
         build: 
             context: ./
-            dockerfile: Dockerfile.production
+            dockerfile: ./docker/Dockerfile.prod
         ports: 
             - 9000:3000
         container_name: rogo

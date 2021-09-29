@@ -2,33 +2,29 @@
 
 ## TypeScript
 
-## Shell
-
-* Development
+## Shell * Development
 
 ```shell
 npm install
 
-npm run start:development
+npm run start:dev
 ```
-* Production
+## Shell * Production
 
 ```shell
 npm install
 
-npm run start:production
+npm run start:prod
 ```
 
-## Docker 
-
-* Development
+## Docker compose * Development
 
 ```shell
-docker-compose -f docker-compose.yml -f docker-compose.development.yml up -d
+docker-compose -f docker-compose.development.yml up -d
 ```
 
-* Production
+## Docker compose * Production
 
 ```shell
-docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d
+docker-compose -f docker-compose.production.yml up -d
 ```
