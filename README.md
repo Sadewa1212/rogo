@@ -5,16 +5,16 @@
 ## Shell * Development
 
 ```shell
-npm install
+yarn install
 
-npm run start:dev
+yarn run start:dev
 ```
 ## Shell * Production
 
 ```shell
-npm install
+yarn install
 
-npm run start:prod
+yarn run start:prod
 ```
 
 ## Docker compose * Development
