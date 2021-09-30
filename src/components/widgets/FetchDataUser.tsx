@@ -12,10 +12,10 @@ export default class FetchDataUser extends React.Component {
 
   render(): JSX.Element {
     return (
-      <div className="fetch_data_user">
+      <div >
         <img src={UnDrawNoData} alt="No Data" />
-        <div className="fetch_data_user_bar_process">
-          <div className="fetch_data_user_bar_process_nested" />
+        <div>
+          <div />
         </div>
       </div>
     );

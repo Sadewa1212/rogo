@@ -11,7 +11,7 @@ export default class NotFound extends React.Component<any, any> {
 
   render(): JSX.Element {
     return (
-      <div className="not_found">
+      <div>
         <img src={UnDrawPageNotFound} alt="Page Not Found" />
         <p>Page Not Found</p>
       </div>

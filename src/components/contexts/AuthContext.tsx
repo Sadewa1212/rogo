@@ -1,7 +1,7 @@
 import React, { useContext, createContext } from "react";
-import { AuthState } from "../../modules";
 import { LoadingAuth } from "../widgets";
 import { auth } from "../../modules/firebase";
+import { AuthState } from "../../types";
 
 const AuthContext: React.Context<AuthState> = createContext<AuthState>({
   isLogin: false,
