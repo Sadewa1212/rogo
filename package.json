@@ -12,7 +12,6 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "env-cmd": "^10.1.0",
     "firebase": "^9.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -24,9 +23,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start:dev": "env-cmd -f .env.dev craco start",
-    "start:prod": "env-cmd -f .env.prod cracostart",
-    "start": "craco start",
+    "start:dev": "cat .env.dev > .env && craco start",
+    "start:prod": "cat .env.prod > .env && cracostart",
+    "start": "cat .env.dev > .env && craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
