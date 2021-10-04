@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.3.0",
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -23,11 +24,11 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start:dev": "env-cmd -f .env.dev react-scripts start",
-    "start:prod": "env-cmd -f .env.prod react-scripts start",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start:dev": "env-cmd -f .env.dev craco start",
+    "start:prod": "env-cmd -f .env.prod cracostart",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -51,6 +52,9 @@
   "devDependencies": {
     "@types/firebase": "^3.2.1",
     "@types/react-router-dom": "^5.1.8",
-    "node-sass": "^6.0.1"
+    "autoprefixer": "^9",
+    "node-sass": "^6.0.1",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }
