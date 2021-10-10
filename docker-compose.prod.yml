@@ -5,21 +5,5 @@ services:
             context: ./
             dockerfile: ./docker/Dockerfile.prod
         container_name: rogo
-        depends_on:
-            - nginx
-        networks:
-            - www-net
-    nginx:
-        image: nginx:alpine
-        container_name: nginx
-        restart: unless-stopped
-        tty: true
         ports:
             - "80:80"
-            - "443:443"
-        networks:
-            - www-net
-
-networks:
-  www-net:
-    driver: bridge
