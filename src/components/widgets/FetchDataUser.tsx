@@ -1,5 +1,4 @@
 import React from "react";
-import { UnDrawNoData } from "../../assets";
 
 export default class FetchDataUser extends React.Component {
   componentDidMount() {
@@ -13,7 +12,7 @@ export default class FetchDataUser extends React.Component {
   render(): JSX.Element {
     return (
       <div >
-        <img src={UnDrawNoData} alt="No Data" />
+      
         <div>
           <div />
         </div>
