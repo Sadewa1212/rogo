@@ -27,6 +27,8 @@
     "start:prod": "cat .env.prod > .env && craco start",
     "start": "cat .env.dev > .env && craco start",
     "build": "craco build",
+    "build:dev": "cat .env.dev > .env && craco build",
+    "build:prod": "cat .env.prod > .env && craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },

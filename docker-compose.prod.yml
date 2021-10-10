@@ -4,6 +4,22 @@ services:
         build: 
             context: ./
             dockerfile: ./docker/Dockerfile.prod
-        ports: 
-            - 9000:3000
         container_name: rogo
+        depends_on:
+            - nginx
+        networks:
+            - www-net
+    nginx:
+        image: nginx:alpine
+        container_name: nginx
+        restart: unless-stopped
+        tty: true
+        ports:
+            - "80:80"
+            - "443:443"
+        networks:
+            - www-net
+
+networks:
+  www-net:
+    driver: bridge
