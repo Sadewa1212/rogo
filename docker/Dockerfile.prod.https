@@ -21,3 +21,5 @@ RUN chmod 700 /etc/nginx/ssl
 COPY ./nginx/cert/cert.prod.pem /etc/nginx/ssl/cert.pem
 
 COPY ./nginx/cert/key.prod.pem /etc/nginx/ssl/key.pem
+
+EXPOSE 80 443

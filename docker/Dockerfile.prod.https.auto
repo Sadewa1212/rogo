@@ -1,0 +1,45 @@
+FROM node:latest AS builder
+
+WORKDIR /usr/app
+
+COPY . .
+
+RUN yarn install
+
+RUN yarn run build:prod
+
+FROM ubuntu AS OS
+
+WORKDIR /cert
+
+RUN apt-get update \
+    && apt-get install -y openssl \
+    && openssl req \
+    -x509 \
+    -subj "/C=US/ST=TX/L=Austin/O=Home/CN=localhost" \
+    -nodes \
+    -days 365 \
+    -newkey rsa:2048 \
+    -keyout /cert/key.pem \
+    -out /cert/cert.pem
+
+
+FROM nginx:alpine
+
+COPY --from=builder /usr/app/build /usr/share/nginx/html
+
+COPY ./nginx/nginx.prod.https.conf /etc/nginx/nginx.conf
+
+COPY ./nginx/general.conf /etc/nginx/general.conf
+
+COPY ./nginx/security.conf /etc/nginx/security.conf
+
+RUN mkdir /etc/nginx/ssl 
+
+RUN chmod 700 /etc/nginx/ssl
+
+COPY --from=OS /cert/cert.pem /etc/ssl/certs/nginx-selfsigned.crt
+
+COPY --from=OS /cert/key.pem /etc/ssl/private/nginx-selfsigned.key
+
+EXPOSE 80 443
