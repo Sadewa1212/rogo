@@ -22,7 +22,7 @@ export default class NotFound extends React.Component<any, any> {
         <div className="flex flex-col items-center md:items-start">
           <p className="text-center font-extrabold text-2xl py-3 pt-3 text-white md:text-3xl">{`${this.title}`}</p>
           <a
-            href="./"
+            href={`${process.env.PUBLIC_URL}/`}
             className="block rounded-md px-4 py-2 mt-0 font-extrabold text-center text-white bg-blue-600 opacity-100 outline-none hover:ring-2 hover:ring-offset-blue-600 active:bg-blue-700 sm:hover:bg-opacity-90 md:my-1"
           >
             Go Home &#8594;
