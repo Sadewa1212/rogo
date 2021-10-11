@@ -8,20 +8,20 @@ RUN yarn install
 
 RUN yarn run build:prod
 
-FROM ubuntu:latest as OS
+# FROM ubuntu:latest as OS
 
-WORKDIR /cert
+# WORKDIR /cert
 
-RUN apt-get update \
-    && apt-get install -y openssl \
-    && openssl req \
-    -x509 \
-    -subj "/C=VN/ST=HN/L=HaNoi/O=Home/CN=168.138.13.179" \
-    -nodes \
-    -days 365 \
-    -newkey rsa:2048 \
-    -keyout /cert/cert.key \
-    -out /cert/cert.crt
+# RUN apt-get update \
+#     && apt-get install -y openssl \
+#     && openssl req \
+#     -x509 \
+#     -subj "/C=VN/ST=HN/L=HaNoi/O=Home/CN=168.138.13.179" \
+#     -nodes \
+#     -days 365 \
+#     -newkey rsa:2048 \
+#     -keyout /cert/cert.key \
+#     -out /cert/cert.crt
 
 FROM nginx:alpine
 
@@ -29,12 +29,12 @@ COPY --from=builder /usr/app/build /usr/share/nginx/html
 
 COPY ./nginx/nginx.prod.https.conf /etc/nginx/nginx.conf
 
-COPY --from=OS /cert/cert.key /etc/nginx/ssl/cert.key
+# COPY --from=OS /cert/cert.key /etc/nginx/ssl/cert.key
 
-COPY --from=OS /cert/cert.crt /etc/nginx/ssl/cert.crt
+# COPY --from=OS /cert/cert.crt /etc/nginx/ssl/cert.crt
 
-# COPY ./nginx/cert/cert.key /etc/nginx/ssl/cert.key
+COPY ./nginx/cert/cert.key /etc/nginx/ssl/cert.key
 
-# COPY ./nginx/cert/cert.crt /etc/nginx/ssl/cert.crt
+COPY ./nginx/cert/cert.crt /etc/nginx/ssl/cert.crt
 
 EXPOSE 80 443
