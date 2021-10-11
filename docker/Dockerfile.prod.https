@@ -16,7 +16,7 @@ RUN apt-get update \
     && apt-get install -y openssl \
     && openssl req \
     -x509 \
-    -subj "/C=VN/ST=HN/L=HaNoi/O=Home/CN=localhost" \
+    -subj "/C=VN/ST=HN/L=HaNoi/O=Home/CN=168.138.13.179" \
     -nodes \
     -days 365 \
     -newkey rsa:2048 \
