@@ -1,9 +1,0 @@
-version: "3"
-services: 
-    app:
-        build: 
-            context: ./
-            dockerfile: ./docker/Dockerfile.dev.https
-        ports: 
-            - "443:3000"
-        container_name: rogo
